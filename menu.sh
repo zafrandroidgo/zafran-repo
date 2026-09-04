@@ -28,10 +28,10 @@ while true; do
                 case "$pilihan_apk" in
                     1)
                         echo "Mengunduh tool APK..."
-                        wget /data/local/tmp/tool.apk "http://zafrandroid.my.id/tool.apk"
+                        wget -O /data/local/tmp/tool.apk "http://zafrandroid.my.id/tool.apk"
                         if [ $? -eq 0 ]; then
-                            echo "Menginstall tool APK..."
-                            pm install -r /data/local/tmp/tool.apk
+                            echo "Menginstall Adiryu APK..."
+                            pm install -r /data/local/tmp/adiryu.apk
                             echo "Instalasi Selesai!"
                         else
                             echo "Gagal mengunduh! Periksa koneksi."

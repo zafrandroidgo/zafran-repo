@@ -28,7 +28,7 @@ while true; do
                 case "$pilihan_apk" in
                     1)
                         echo "Mengunduh tool APK..."
-                        wget --no-check-certificate -O /data/local/tmp/adiryu.apk "http://zafrandroid.my.id/tool.apk"
+                        wget /data/local/tmp/tool.apk "http://zafrandroid.my.id/tool.apk"
                         if [ $? -eq 0 ]; then
                             echo "Menginstall tool APK..."
                             pm install -r /data/local/tmp/tool.apk

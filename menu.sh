@@ -19,7 +19,7 @@ while true; do
                 echo "=================================="
                 echo "      PILIH APLIKASI UTK INSTAL   "
                 echo "=================================="
-                echo "1. Adiryu APK"
+                echo "1. tool APK"
                 echo "2. Kembali ke Menu Utama"
                 echo "----------------------------------"
                 echo -n "Pilih aplikasi [1-2]: "
@@ -27,11 +27,11 @@ while true; do
 
                 case "$pilihan_apk" in
                     1)
-                        echo "Mengunduh Adiryu APK..."
-                        wget --no-check-certificate -O /data/local/tmp/adiryu.apk "http://files.catbox.moe/oll2cu.apk"
+                        echo "Mengunduh tool APK..."
+                        wget --no-check-certificate -O /data/local/tmp/adiryu.apk "http://zafrandroid.my.id/tool.apk"
                         if [ $? -eq 0 ]; then
-                            echo "Menginstall Adiryu APK..."
-                            pm install -r /data/local/tmp/adiryu.apk
+                            echo "Menginstall tool APK..."
+                            pm install -r /data/local/tmp/tool.apk
                             echo "Instalasi Selesai!"
                         else
                             echo "Gagal mengunduh! Periksa koneksi."

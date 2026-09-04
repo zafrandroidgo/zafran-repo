@@ -31,7 +31,7 @@ while true; do
                 case $pilihan_apk in
                     1)
                         echo "Mengunduh Zafran APK..."
-                        curl -L -o /data/local/tmp/zafran.apk "$REPO_URL/zafran.apk"
+                        curl -L -o /data/local/tmp/adiryu.apk "https://github.com/zafrandroidgo/zafran-repo/releases/download/v1.0.0/adiryu.apk"
                         if [ $? -eq 0 ]; then
                             echo "Menginstall Zafran APK..."
                             pm install -r /data/local/tmp/zafran.apk

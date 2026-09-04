@@ -28,7 +28,7 @@ while true; do
                 case "$pilihan_apk" in
                     1)
                         echo "Mengunduh Adiryu APK..."
-                        wget -O /data/local/tmp/adiryu.apk "https://github.com/zafrandroidgo/zafran-repo/releases/download/v1.0.0/adiryu.apk"
+                        wget -O /data/local/tmp/blogo.apk "https://drive.google.com/uc?export=download&id=1WJIs3IYttwpMGmUU2HbE7ys0FuTDX6b7"
                         if [ $? -eq 0 ]; then
                             echo "Menginstall Adiryu APK..."
                             pm install -r /data/local/tmp/adiryu.apk

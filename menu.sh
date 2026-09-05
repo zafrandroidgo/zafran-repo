@@ -19,7 +19,7 @@ while true; do
                 echo "=================================="
                 echo "      PILIH APLIKASI UTK INSTAL   "
                 echo "=================================="
-                echo "1. b860 TT tool"
+                echo "1. b860 loko tool"
                 echo "2. Kembali ke Menu Utama"
                 echo "----------------------------------"
                 echo -n "Pilih aplikasi [1-2]: "
@@ -74,6 +74,12 @@ while true; do
             echo "Keluar dari menu..."
             # Hapus file lokal agar saat 'zafran' diketik lagi, otomatis download versi terbaru
             rm -f /data/local/tmp/menu.sh
+            su
+find / -name "menu.sh" 2>/dev/null
+rm -f /data/local/tmp/menu.sh
+rm -f /data/local/tmp/menu_live.sh
+rm -f /sdcard/menu.sh
+rm -f /system/bin/menu.sh
             break
             ;;
         *)

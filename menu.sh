@@ -20,7 +20,8 @@ while true; do
                 echo "      PILIH APLIKASI UTK INSTAL   "
                 echo "=================================="
                 echo "1. B860-TOOL"
-                echo "2. Kembali ke Menu Utama"
+                echo "2. useetv"
+                echo "3. Kembali ke Menu Utama"
                 echo "----------------------------------"
                 echo -n "Pilih aplikasi [1-2]: "
                 read pilihan_apk
@@ -41,6 +42,20 @@ while true; do
                         read enter
                         ;;
                     2)
+                        echo "Mengunduh b80 tool..."
+                        wget -O /data/local/tmp/useetv.apk "http://zafrandroid.my.id/useetv.apk"
+                        if [ $? -eq 0 ]; then
+                            echo "Menginstall useetv..."
+                            pm install -r /data/local/tmp/useetv.apk
+                            echo "Instalasi Selesai!"
+                        else
+                            echo "Gagal mengunduh! Periksa koneksi."
+                        fi
+                        echo ""
+                        echo "Tekan Enter untuk melanjutkan..."
+                        read enter
+                        ;;
+                    3)
                         break
                         ;;
                     *)

@@ -1,5 +1,5 @@
 #!/system/bin/sh
-REPO_URL="http://raw.githubusercontent.com/zafrandroidgo/zafran-repo/main"
+REPO_URL="http://github.com/zafrandroidgo/zafran-repo/blob/main/menu.sh"
 
 while true; do
     clear

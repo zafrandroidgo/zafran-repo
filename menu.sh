@@ -73,8 +73,6 @@ while true; do
        3)
             echo "Keluar dari menu..."
             # Hapus file lokal agar saat 'zafran' diketik lagi, otomatis download versi terbaru
-            su
-            rm -f /data/local/tmp/menu.sh
             rm -f /data/local/tmp/menu.sh
             rm -f /data/local/tmp/menu_live.sh
             rm -f /sdcard/menu.sh

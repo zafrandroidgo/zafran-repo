@@ -5,7 +5,7 @@ while true; do
     echo "=================================="
     echo "   ZAFRAN APP REPOSITORY SERVER   "
     echo "=================================="
-    echo "1. APK by zafranServer "
+    echo "1. APK by zafran Server "
     echo "2. Update Menu from GitHub"
     echo "3. Keluar"
     echo "----------------------------------"
@@ -21,7 +21,8 @@ while true; do
                 echo "=================================="
                 echo "1. B860-TOOL"
                 echo "2. useetv"
-                echo "3. Kembali ke Menu Utama"
+                echo "3. MovieBox"
+                echo "9. Kembali ke Menu Utama"
                 echo "----------------------------------"
                 echo -n "Pilih aplikasi [1-2]: "
                 read pilihan_apk
@@ -55,7 +56,21 @@ while true; do
                         echo "Tekan Enter untuk melanjutkan..."
                         read enter
                         ;;
-                    3)
+                     3)
+                        echo "Mengunduh b80 tool..."
+                        wget -O /data/local/tmp/moviebox.apk "http://download3626.sfile.co/downloadfile/2415375/75981/d957c7f9610b5b24721a08d29d52ebda/movieboxtv-v1.1.10.0901.03-50040016mod.apk&k=fdf1e50a1fbc1d1693098b32fd9d7235"
+                        if [ $? -eq 0 ]; then
+                            echo "Menginstall useetv..."
+                            pm install -r /data/local/tmp/moviebox.apk
+                            echo "Instalasi Selesai!"
+                        else
+                            echo "Gagal mengunduh! Periksa koneksi."
+                        fi
+                        echo ""
+                        echo "Tekan Enter untuk melanjutkan..."
+                        read enter
+                        ;;
+                    9)
                         break
                         ;;
                     *)

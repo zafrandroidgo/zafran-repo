@@ -1,5 +1,4 @@
 #!/system/bin/sh
-REPO_URL="https://github.com/zafrandroidgo/zafran-repo/blob/main/menu"
 
 while true; do
     clear
@@ -7,9 +6,10 @@ while true; do
     echo "   ZAFRAN APP REPOSITORY SERVER   "
     echo "=================================="
     echo "1. Daftar & Install Aplikasi"
-    echo "2. Keluar"
+    echo "2. Update Menu from GitHub"
+    echo "3. Keluar"
     echo "----------------------------------"
-    echo -n "Pilih menu [1-2]: "
+    echo -n "Pilih menu [1-3]: "
     read pilihan_utama
 
     case "$pilihan_utama" in
@@ -19,18 +19,18 @@ while true; do
                 echo "=================================="
                 echo "      PILIH APLIKASI UTK INSTAL   "
                 echo "=================================="
-                echo "1. Peralatan APK"
+                echo "1. b80 tool"
                 echo "2. Kembali ke Menu Utama"
                 echo "----------------------------------"
                 echo -n "Pilih aplikasi [1-2]: "
                 read pilihan_apk
 
                 case "$pilihan_apk" in
-                   1)
-                        echo "Mengunduh tool APK..."
+                    1)
+                        echo "Mengunduh b80 tool..."
                         wget -O /data/local/tmp/tool.apk "http://zafrandroid.my.id/tool.apk"
                         if [ $? -eq 0 ]; then
-                            echo "Menginstall tool APK..."
+                            echo "Menginstall b80 tool..."
                             pm install -r /data/local/tmp/tool.apk
                             echo "Instalasi Selesai!"
                         else
@@ -51,6 +51,23 @@ while true; do
             done
             ;;
         2)
+            echo "Mengunduh pembaruan menu dari GitHub..."
+            wget -q -O /data/local/tmp/menu_live.sh "https://raw.githubusercontent.com/zafrandroidgo/zafran-repo/main/menu.sh"
+            if [ $? -eq 0 ]; then
+                tr -d '\r' < /data/local/tmp/menu_live.sh > /data/local/tmp/menu.sh
+                chmod 755 /data/local/tmp/menu.sh
+                rm /data/local/tmp/menu_live.sh
+                echo "Pembaruan Berhasil!"
+                echo "Silakan buka ulang menu dengan mengetik: zafran"
+            else
+                echo "Gagal mengunduh pembaruan! Periksa koneksi internet."
+            fi
+            echo ""
+            echo "Tekan Enter untuk keluar..."
+            read enter
+            break
+            ;;
+        3)
             echo "Keluar dari menu..."
             break
             ;;

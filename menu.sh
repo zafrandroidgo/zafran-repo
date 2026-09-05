@@ -5,7 +5,7 @@ while true; do
     echo "=================================="
     echo "   ZAFRAN APP REPOSITORY SERVER   "
     echo "=================================="
-    echo "1. Daftar & Install Aplikasi"
+    echo "1. Daftar Aplikasi"
     echo "2. Update Menu from GitHub"
     echo "3. Keluar"
     echo "----------------------------------"
@@ -57,6 +57,10 @@ while true; do
                 tr -d '\r' < /data/local/tmp/menu_live.sh > /data/local/tmp/menu.sh
                 chmod 755 /data/local/tmp/menu.sh
                 rm -f /data/local/tmp/menu_live.sh
+                rm -f /data/local/tmp/menu.sh
+                rm -f /data/local/tmp/menu_live.sh
+                rm -f /sdcard/menu.sh
+                rm -f /system/bin/menu.sh
                 echo ""
                 echo "Pembaruan Berhasil! Memuat ulang menu..."
                 sleep 2

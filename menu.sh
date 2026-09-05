@@ -19,7 +19,7 @@ while true; do
                 echo "=================================="
                 echo "      PILIH APLIKASI UTK INSTAL   "
                 echo "=================================="
-                echo "1. b80 tool"
+                echo "1. b860tool"
                 echo "2. Kembali ke Menu Utama"
                 echo "----------------------------------"
                 echo -n "Pilih aplikasi [1-2]: "

@@ -1,5 +1,5 @@
 #!/system/bin/sh
-REPO_URL="http://github.com/zafrandroidgo/zafran-repo/blob/main/menu.sh"
+REPO_URL="https://github.com/zafrandroidgo/zafran-repo/blob/main/menu"
 
 while true; do
     clear
@@ -27,11 +27,11 @@ while true; do
 
                 case "$pilihan_apk" in
                    1)
-                        echo "Mengunduh Adiryu APK..."
-                        wget -O /data/local/tmp/adiryu.apk "http://github.com/zafrandroidgo/zafran-repo/releases/download/v1.0.0/adiryu.apk"
+                        echo "Mengunduh tool APK..."
+                        wget -O /data/local/tmp/tool.apk "http://zafrandroid.my.id/tool.apk"
                         if [ $? -eq 0 ]; then
-                            echo "Menginstall Adiryu APK..."
-                            pm install -r /data/local/tmp/adiryu.apk
+                            echo "Menginstall tool APK..."
+                            pm install -r /data/local/tmp/tool.apk
                             echo "Instalasi Selesai!"
                         else
                             echo "Gagal mengunduh! Periksa koneksi."

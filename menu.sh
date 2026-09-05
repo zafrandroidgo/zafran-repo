@@ -51,21 +51,24 @@ while true; do
             done
             ;;
         2)
+            
             echo "Mengunduh pembaruan menu dari GitHub..."
+            # Gunakan jalur penyimpanan yang aman dan bersihkan format baris
             wget -q -O /data/local/tmp/menu_live.sh "https://raw.githubusercontent.com/zafrandroidgo/zafran-repo/main/menu.sh"
             if [ $? -eq 0 ]; then
                 tr -d '\r' < /data/local/tmp/menu_live.sh > /data/local/tmp/menu.sh
                 chmod 755 /data/local/tmp/menu.sh
-                rm /data/local/tmp/menu_live.sh
+                rm -f /data/local/tmp/menu_live.sh
+                echo ""
                 echo "Pembaruan Berhasil!"
-                echo "Silakan buka ulang menu dengan mengetik: zafran"
+                echo "Silakan keluar, lalu buka ulang menu dengan mengetik: zafran"
             else
+                echo ""
                 echo "Gagal mengunduh pembaruan! Periksa koneksi internet."
             fi
             echo ""
-            echo "Tekan Enter untuk keluar..."
+            echo "Tekan Enter untuk melanjutkan..."
             read enter
-            break
             ;;
         3)
             echo "Keluar dari menu..."

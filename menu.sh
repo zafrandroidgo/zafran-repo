@@ -5,7 +5,7 @@ while true; do
     echo "=================================="
     echo "   ZAFRAN APP REPOSITORY SERVER   "
     echo "=================================="
-    echo "1. Daftarbajingan Aplikasi"
+    echo "1. Aplikasi - zafran "
     echo "2. Update Menu from GitHub"
     echo "3. Keluar"
     echo "----------------------------------"
